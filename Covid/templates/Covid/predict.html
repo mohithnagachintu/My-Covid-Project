@@ -1,0 +1,14 @@
+{% extends 'Covid/base.html' %} {% block content %}
+<div class="container">
+    <form method="POST" enctype="multipart/form-data" action="">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend style="margin-bottom: 20px;"> Covid Predictor </legend>
+            {{ form.as_p }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Analyse</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}
